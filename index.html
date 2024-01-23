@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Ajedrez USMA</title>
+    <title>Castling</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./Images/chess-board.png">
 </head>
@@ -15,7 +15,7 @@
             <!-- Logo Components-->
             <div class="logo-components">
                 <img class="real-logo" src="./Images/chess-board.png" alt="">
-                <div class="logo">Chess Masters</div>
+                <div class="logo">Castling</div>
             </div>
             
             <!-- Navigation Bar Added-->
@@ -31,14 +31,29 @@
         <div class="parent-container">
             <div class="left-cntr">
                 <div class="cntr-heading">
-                    Club de <br>Ajedrez
+                    Únete a<br>nuestro
                 </div>
                 <div class="cntr-description">
-                    123412341234
+                    club de ajedrez
                 </div>
-                <div class="cntr-button">
-                    <button>únete al club</button>
-                </div>
+
+                    <div class="cntr-button">
+        <button onclick="enviarCorreo()">Únete al Club</button>
+    </div>
+
+    <script>
+        function enviarCorreo() {
+            var destinatario = "kzhul@usma.com.pa";
+            var asunto = "¡Quiero unirme al club!";
+            var cuerpo = "Hola,\n\nMe gustaría unirme al club. ¿Cómo puedo hacerlo?\n\nGracias.";
+
+            var mailtoLink = "mailto:" + destinatario + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo);
+
+            // Abrir el cliente de correo predeterminado
+            window.location.href = mailtoLink;
+        }
+    </script>
+
             </div>
             <div class="right-cntr">
                 <img class="chess-board" src="./Images/chess-header.png" alt="chess header">
@@ -48,18 +63,18 @@
 
     <div class="middlehero">
         <div class="middletitle">
-            Opciones 
+            Conózcanos 
         </div>
     </div>
 
     <div class="cards-cntr">
         <div class="cards">
             <img src="Images/chess-game.png" alt="chess game">
-            <p class="text">1</p>
+            <p class="text">Caroline Robles<br>Presidente</p>
         </div>
         <div class="cards">
             <img src="Images/chess-movement.png" alt="chess game">
-            <p class="text">2</p>
+            <p class="text">Kevin Zhu<br>Miembro</p>
         </div>
         <div class="cards">
             <img src="Images/chess.png" alt="chess game">
@@ -73,30 +88,19 @@
 
     <div class="quote-cntr">
         <div class="quote">
-           <p><em>Que viva el amor</em>
+           <p><em>Mi objetivo es ser el mejor jugador de ajedrez en la historia.</em>
            </p>
         </div>
 
         <div class="quote-author">
-            <div class="magnus">Sabio 
-            <div class="magnustwo"><em>(el mejor)</em></div> </div>
+            <div class="magnus">Magnus Carlsen
+            <div class="magnustwo"><em>Campeón Mundial de Ajedrez</em></div> </div>
         </div>
-    </div>
-
-    <div class="cta">
-        <div class="cta-text">
-            <h3>Afíliate con nosotros</h3>
-            <p>Únete al club</p>
-        </div>
-
-        <button class="signup">
-            Correo
-        </button>
     </div>
 
     <footer>
         <div class="footer">
-            <p>Club de Ajedrez | <strong>el gran sabio</strong></p>
+            <p>Castling | <strong>Club de Ajedrez</strong></p>
         </div>
         
     </footer>
